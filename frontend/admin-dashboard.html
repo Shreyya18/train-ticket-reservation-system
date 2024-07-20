@@ -1,0 +1,161 @@
+<!-- admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #737296;
+  color: #17153B;
+  height: 100%;
+}
+
+.navbar {
+  background-color: #17153B;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+   background-color: #555; 
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#users-table table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+#users-table th, #users-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#users-table th {
+  background-color: #17153B;
+  color: #fff;
+}
+
+#users-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#users-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- <div class="logo">Railway Booking System</div> -->
+    <ul>
+      <li><a href="index.html" class="logo">Train Ticket Reservation System</a></li>
+      <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="booking-history.html">Booking History</a></li>
+      <li><a href="admin-login.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Admin Dashboard Content -->
+  <main>
+    <h1 >Admin Dashboard</h1>
+    <section class="dashboard-content">
+      <h2>Registered Users</h2>
+     <!-- Add a div to display the users -->
+<!-- Add a div to display the users table -->
+<div id="users-table"></div>
+
+<script>
+  // Make an AJAX request to retrieve all users
+  fetch('/api/users')
+   .then(response => response.json())
+   .then(users => {
+      const tableHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Signup Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${users.map(user => {
+              return `
+                <tr>
+                  <td>${user.username}</td>
+                  <td>${user.email}</td>
+                  <td>${user.created_at}</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      `;
+      document.getElementById('users-table').innerHTML = tableHTML;
+    })
+   .catch(error => console.error(error));
+</script>      <!-- Add content here, such as booking statistics, user management, etc. -->
+    </section>
+  </main>
+</body>
+</html>

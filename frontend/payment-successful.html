@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  font-family:'Times New Roman', Times, serif;
+  background-color: #8f8cd5;
+  color: #333;
+  height: 100%;
+}
+
+header {
+  background-color: #17153B;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.no-heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.receipt {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.receipt h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.receipt-table th, .receipt-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.receipt-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.receipt-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.receipt-table tr:hover {
+  background-color: #ddd;
+}
+
+button.no-print {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #17153B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button.no-print:hover {
+  background-color: #0056b3;
+}
+
+   
+  </style>
+  <script src="book-detail-f.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Train Ticket Reservation System</a>
+    </nav>
+  </header>
+  <div class="no-heading">
+    <h1>Payment Successful</h1>
+    <p style="color: black;">Your payment has been processed successfully.</p>
+  </div>
+  <div class="receipt">
+    <h2>Receipt</h2>
+    <table class="receipt-table">
+      <tr>
+        <th>Booking ID</th>
+        <td><span id="bookingId"></span></td>
+      </tr>
+      <tr>
+        <th>Train No</th>
+        <td><span id="trainNo"></span></td>
+      </tr>
+      <tr>
+        <th>Train Name</th>
+        <td><span id="trainName"></span></td>
+      </tr>
+      <tr>
+        <th>From</th>
+        <td><span id="sourceStation"></span></td>
+      </tr>
+      <tr>
+        <th>To</th>
+        <td><span id="destinationStation"></span></td>
+      </tr>
+      <tr>
+        <th>Journey Date</th>
+        <td><span id="journeyDate"></span></td>
+      </tr>
+      <tr>
+        <th>Departure Time</th>
+        <td><span id="departureTime"></span></td>
+      </tr>
+      <tr>
+        <th>Arrival Time</th>
+        <td><span id="arrivalTime"></span></td>
+      </tr>
+      <tr>
+        <th>Amount</th>
+        <td><span id="amount"></span></td>
+      </tr>
+      <tr>
+        <th>Payment Date</th>
+        <td><span id="paymentDate"></span></td>
+      </tr>
+      <tr>
+        <th>Class Type</th>
+        <td><span id="classType"></span></td>
+      </tr>
+      <tr>
+        <th>Route</th>
+        <td><span id="route"></span></td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td><span id="status"></span></td>
+      </tr>
+      <tr>
+        <th>Passenger Name</th>
+        <td><span id="passengerName"></span></td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td><span id="gender"></span></td>
+      </tr>
+      <tr>
+        <th>Phone</th>
+        <td><span id="phone"></span></td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td><span id="age"></span></td>
+      </tr>
+    </table>
+    <style>
+      .receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.receipt-table th, .receipt-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.receipt-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.receipt-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.receipt-table tr:hover {
+  background-color: #ddd;
+}
+
+.receipt {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+    </style>
+  </div>
+  <button style="color:737296 ;" class="no-print" onclick="printReceipt()">Print </button>
+  <style>
+     @media print {
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</body>
+</html>

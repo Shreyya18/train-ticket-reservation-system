@@ -1,0 +1,20 @@
+#button a {
+    float: left; /* Aligns links side by side */
+    display: block; /* Makes links fill their container */
+    margin: 0 15px; /* Space between buttons */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px; /* Larger font size */
+    border: none; /* No border */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+#button a:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}

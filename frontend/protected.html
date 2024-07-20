@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Protected Route</title>
+</head>
+<body>
+  <h1>Welcome to the protected route!</h1>
+
+  <script>
+    // Check if token is valid
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = '../frontend/login.html';
+    }
+  </script>
+</body>
+</html>

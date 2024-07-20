@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+.header {
+  background-color: #17153B;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust based on the header height */
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: rgb(44, 44, 44);
+}
+
+label, input {
+  font-size: 18px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #17153B;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">Train Ticket Reservation System</a>
+      <!-- <div class="menu-icon" onclick="toggleSidebar()"><i class="fas fa-bars"></i></div> -->
+    </nav>
+  </header>
+  <br>
+  <br>
+
+  <h1>Admin Login</h1>
+  <form id="admin-login-form">
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+  </form>
+  <script>
+    document.getElementById('admin-login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
+      };
+      fetch('/api/admin-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          window.location.href = 'admin-dashboard.html';
+        } else {
+          alert('Login failed: ' + data.message);
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  </script>
+   <footer>
+    <p>&copy; 2024 Train Ticket Reservation System. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+</body>
+</html>

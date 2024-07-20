@@ -1,0 +1,174 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign up</title>
+  <style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  background-color: #007bff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.navbar a.active {
+  text-decoration: none;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  background-color: #6a68b4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #17153b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #17153b;
+}
+
+#signupMessage {
+  margin-top: 20px;
+  color: #75035e;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 20px;
+}
+
+p a {
+  color: #75035e;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" class="logo">Train Ticket Reservation System</a></li>
+        <li class="nav-right">
+          <a href="login.html">Login</a>
+          <a href="signup.html" class="active">Sign up</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Sign up</h1>
+    <form action="/signup" method="post" id="Sign up ">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <label for="password"> Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password">
+      <input type="submit" value="Sign up">
+    </form>
+    <div id="signupMessage"></div>
+    <p style="color: black;">Already have an account? <a href="login.html">Login</a></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
