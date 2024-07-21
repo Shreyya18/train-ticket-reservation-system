@@ -18,6 +18,7 @@ Features
 Project Structure
 
 -backend/: Contains server-side code and APIs for handling bookings, user authentication, and database interactions.
+
 -frontend/: Contains client-side code, including HTML, CSS, and JavaScript files for user interfaces.
 
 Setup
@@ -25,6 +26,7 @@ Setup
 1.Clone the Repository
 bash
 git clone https://github.com/shreyya18/train-ticket-reservation-system.git
+
 cd train-ticket-reservation-system
 
 
@@ -35,11 +37,13 @@ cd train-ticket-reservation-system
 -Install dependencies:
 
 bash
+
 npm install
 
 -Start the server:
 
 bash
+
 npm start
 
 -Ensure you have a MySQL database configured and update the database connection details in backend/config/db.js.
@@ -47,6 +51,7 @@ npm start
 3.Frontend Setup
 
 -Navigate to the frontend/ directory.
+
 -Open index.html in your browser or set up a local server for development.
 
 4.Configuration
@@ -55,12 +60,16 @@ npm start
 
 
 Technologies Used
+
 -Frontend: HTML, CSS, JavaScript
+
 -Backend: Node.js, Express
+
 -Database: MySQL
 
 
 Contributing
+
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 
