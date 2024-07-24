@@ -1,5 +1,6 @@
 Train Ticket Reservation System
 
+
 Overview
 
 The Train Ticket Reservation System is a web application designed for booking train tickets online. It features a modern and responsive design, allowing users to search for trains, view available trains, and book tickets. The system supports user registration, login, and provides an admin dashboard for managing train information and bookings.
