@@ -1,0 +1,21 @@
+{
+  "name": "train-ticket-reservation-system",
+  "version": "1.0.0",
+  "description": "Train Ticket Reservation System\r ---------------------------------",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shreyya18/train-ticket-reservation-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shreyya18/train-ticket-reservation-system/issues"
+  },
+  "homepage": "https://github.com/Shreyya18/train-ticket-reservation-system#readme"
+}
