@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS dbms;
+USE dbms;
+
 CREATE TABLE signup (
   id INT NOT NULL AUTO_INCREMENT,
   username VARCHAR(50) NOT NULL,
@@ -419,4 +422,3 @@ alter table train add  Amount int not null;
 select * from train;
 update  train set amount='1000' where train_no='1111';
 update  train set amount='1000' where train_no='1111';
-delete from train where id ='
