@@ -5,7 +5,6 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #8f8cd5, #575757);
     /* background-color: white; */
-    color: #333;
   }
   
   /* .navbar {
@@ -194,7 +193,7 @@ th {
 .main-content {
   padding: 20px;
   transition: margin-right 0.5s;
-  background: linear-gradient(135deg, #8f8cd5, #575757);
+  background: linear-gradient( white,#17153B );
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
