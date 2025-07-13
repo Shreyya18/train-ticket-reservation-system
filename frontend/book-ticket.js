@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const userId = localStorage.getItem('user_id');
   if(!userId){
     alert('please login to book a ticket');
-    windows.location.href='login.html';
+    window.location.href='login.html';
     return;
   }
   
@@ -48,14 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
       body: JSON.stringify(bookingData)
     })
     .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        const bookingId = data.booking_id;
-        window.location.href = `payment.html?bookingId=${bookingId}&trainNo=${trainNo}`;
-      } else {
-        alert('Error booking the ticket');
-      }
-    })
+   .then(data => {
+  console.log('Booking response:', data); // Inspect full response
+  if (data.success) {
+    const bookingId = data.booking_id;
+    window.location.href = `payment.html?bookingId=${bookingId}&trainNo=${trainNo}`;
+  } else {
+    alert(`Error: ${data.message || 'Booking failed unexpectedly.'}`);
+  }
+})
     .catch(error => console.error('Error:', error));
   });
 });
