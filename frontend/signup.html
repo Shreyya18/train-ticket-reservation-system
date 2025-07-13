@@ -9,8 +9,8 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #f0f2f5;
-  color: #333;
-  height: 100%;
+  color: black;
+  height: min-content;
   display: flex;
   flex-direction: column;
 }
@@ -72,11 +72,11 @@ main {
 
 h1 {
   margin-bottom: 20px;
-  color: #333;
+  color: black;
 }
 
 form {
-  background-color: #6a68b4;
+  background-color: #17153b;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -105,8 +105,8 @@ input[type="password"] {
 
 input[type="submit"] {
   padding: 10px 20px;
-  background-color: #17153b;
-  color: #fff;
+  background-color: white;
+  color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -114,8 +114,8 @@ input[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-  background-color: #17153b;
+#submit:hover {
+  background-color: #007bff;
 }
 
 #signupMessage {
@@ -163,7 +163,7 @@ p a:hover {
       <input type="password" id="password" name="password">
       <label for="password"> Confirm Password:</label>
       <input type="password" id="confirm-password" name="confirm-password">
-      <input type="submit" value="Sign up">
+      <input type="submit" id="submit" value="Sign up">
     </form>
     <div id="signupMessage"></div>
     <p style="color: black;">Already have an account? <a href="login.html">Login</a></p>
