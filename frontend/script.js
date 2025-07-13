@@ -20,8 +20,10 @@ signupForm.addEventListener('submit', (e) => {
         const signupMessageDiv = document.getElementById('signupMessage');
         if (data.message === 'Signup successful!') {
           localStorage.setItem('user_id', data.id);
-          signupMessageDiv.innerHTML = 'Signup successful! <a href="login.html">Click here to login</a>';
-        } else {
+signupMessageDiv.textContent = 'Signup successful! Redirecting to login...';
+setTimeout(() => {
+  window.location.href = 'login.html';
+}, 1500); // Delay for UX feedback        } else {
           signupMessageDiv.textContent = data.message;
         }
       })
