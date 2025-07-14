@@ -366,28 +366,29 @@ INSERT INTO Train (
   'Howrah -> Sealdah -> Ganga Sagar'
 );
 select * from train;
-CREATE TABLE Booking (
-  booking_id INT AUTO_INCREMENT PRIMARY KEY,
-  user_id INT NOT NULL,
-  train_no INT NOT NULL,
-  booking_date DATE NOT NULL,
-  journey_date DATE NOT NULL,
-  status VARCHAR(20) NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES signup(id),
-  FOREIGN KEY (train_no) REFERENCES Train(Train_No)
-);
-desc booking;
-CREATE TABLE Payment (
-  payment_id INT AUTO_INCREMENT PRIMARY KEY,
-  booking_id INT NOT NULL,
-  amount DECIMAL(10, 2) NOT NULL,
-  payment_date DATE NOT NULL,
-  payment_status VARCHAR(20) NOT NULL,
-  FOREIGN KEY (booking_id) REFERENCES Booking(booking_id)
-);
-desc payment;
-drop table booking;
-drop table payment;
+-- CREATE TABLE Booking (
+--   booking_id INT AUTO_INCREMENT PRIMARY KEY,
+--   user_id INT NOT NULL,
+--   train_no INT NOT NULL,
+--   booking_date DATE NOT NULL,
+--   journey_date DATE NOT NULL,
+--   status VARCHAR(20) NOT NULL,
+--   FOREIGN KEY (user_id) REFERENCES signup(id),
+--   FOREIGN KEY (train_no) REFERENCES Train(Train_No)
+-- );
+-- desc booking;
+
+-- CREATE TABLE Payment (
+--   payment_id INT AUTO_INCREMENT PRIMARY KEY,
+--   booking_id INT NOT NULL,
+--   amount DECIMAL(10, 2) NOT NULL,
+--   payment_date DATE NOT NULL,
+--   payment_status VARCHAR(20) NOT NULL,
+--   FOREIGN KEY (booking_id) REFERENCES Booking(booking_id)
+-- );
+-- desc payment;
+-- drop table booking;
+-- drop table payment;
 
 CREATE TABLE Booking (
   booking_id INT AUTO_INCREMENT PRIMARY KEY,

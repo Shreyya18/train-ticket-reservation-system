@@ -3,7 +3,7 @@ body {
     font-family:'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #8f8cd5, #575757);
+  background: linear-gradient( white,#17153B );
     /* background-color: white; */
   }
   
@@ -57,7 +57,7 @@ body {
   }
   
   h1 {
-    color: #333;
+    color: white;
   }
   .heads{
     color: #4b4b4b;
